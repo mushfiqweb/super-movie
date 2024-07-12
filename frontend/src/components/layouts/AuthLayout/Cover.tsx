@@ -1,8 +1,8 @@
-import { cloneElement } from 'react'
+import type { CommonProps } from '@/@types/common'
 import Logo from '@/components/template/Logo'
 import { APP_NAME } from '@/constants/app.constant'
-import type { CommonProps } from '@/@types/common'
-import type { ReactNode, ReactElement } from 'react'
+import type { ReactElement, ReactNode } from 'react'
+import { cloneElement } from 'react'
 
 interface CoverProps extends CommonProps {
     content?: ReactNode
@@ -18,18 +18,8 @@ const Cover = ({ children, content, ...rest }: CoverProps) => {
                 }}
             >
                 <Logo mode="dark" />
-                <div>
-                    <h3 className="text-white mb-4">
-                        Jump start your project with Elstar
-                    </h3>
-                    <p className="text-lg text-white opacity-80 max-w-[700px]">
-                        Elstar comes with a complete set of UI components
-                        crafted with Tailwind CSS, it fulfilled most of the use
-                        case to create modern and beautiful UI and application
-                    </p>
-                </div>
+                
                 <span className="text-white">
-                    Copyright &copy; {`${new Date().getFullYear()}`}{' '}
                     <span className="font-semibold">{`${APP_NAME}`}</span>{' '}
                 </span>
             </div>

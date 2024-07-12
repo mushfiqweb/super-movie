@@ -5,7 +5,7 @@ import Avatar from '@/components/ui/Avatar'
 import Loading from '@/components/shared/Loading'
 import MediaSkeleton from '@/components/shared/loaders/MediaSkeleton'
 
-const WithLoding = () => {
+const WithLoading = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     return (
@@ -41,8 +41,8 @@ const WithLoding = () => {
                         shape="circle"
                     />
                     <div>
-                        <h6>Carolyn Perkins</h6>
-                        <p>carolyn.p@elstar.com</p>
+                        <h6>mushfiqweb</h6>
+                        <p>hello@mushfiqweb.com</p>
                     </div>
                 </div>
             </Loading>
@@ -50,5 +50,5 @@ const WithLoding = () => {
     )
 }
 
-export default WithLoding
+export default WithLoading
 ```
