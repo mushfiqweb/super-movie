@@ -56,7 +56,15 @@ We are using the followings:
 -   Draft JS
 -   Vite
 
-## Available Scripts
+
+# Installation
+1. Clone the repository:
+```git clone https://github.com/mushfiqweb/super-movie```
+2. Navigate to the project directory: `cd movie-api/frontend`
+
+3. Install dependencies: `npm install`
+
+# Running the Application
 
 **Please note, you have to use `npm` as package manager.**
 
@@ -102,18 +110,3 @@ extensions:
 
 We use [Husky](https://github.com/typicode/husky) as a pre-commit hook for Git and
 [Prettier](https://prettier.io/) for code formatting.
-
-# Instructions to run the App
-1. Create your local development branch from `develop`
-2. Create an `.env` file and copy the contents of `.env.example`, or add the followings:
-
-```
-    NODE_ENV=development
-    VITE_REACT_APP_API_ENDPOINT=
-    VITE_REACT_APP_API_PROTOCOL=http://
-    VITE_REACT_APP_API_VER=v1
-    VITE_PERMISSION_MODULE=0
-    VITE_BL_CMS_FE_API_URL=
-```
-
-4. After running the `npm start`, you should be able to access the app at [http://localhost:3000](http://localhost:3000).
