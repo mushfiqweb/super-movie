@@ -32,6 +32,12 @@ const authRoute: Routes = [
         component: lazy(() => import('@/views/pages/Home')),
         authority: [],
     },
+    {
+        key: 'movie-details',
+        path: `/movies/:id`,
+        component: lazy(() => import('@/views/pages/Home/MovieDetails')),
+        authority: [],
+    },
 ]
 
 export default authRoute

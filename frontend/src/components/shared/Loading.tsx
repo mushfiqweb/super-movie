@@ -1,6 +1,6 @@
+import type { CommonProps } from '@/@types/common'
 import Spinner from '@/components/ui/Spinner'
 import classNames from 'classnames'
-import type { CommonProps } from '@/@types/common'
 import type { ElementType, ReactNode } from 'react'
 
 interface BaseLoadingProps extends CommonProps {
@@ -71,21 +71,40 @@ const CoveredLoading = (props: BaseLoadingProps) => {
     )
 }
 
-const Loading = ({ type, ...rest }: LoadingProps) => {
-    switch (type) {
-        case 'default':
-            return <DefaultLoading {...rest} />
-        case 'cover':
-            return <CoveredLoading {...rest} />
-        default:
-            return <DefaultLoading {...rest} />
-    }
-}
 
-Loading.defaultProps = {
-    loading: false,
-    type: 'default',
-    asElement: 'div',
+const Loading: React.FC<LoadingProps> = ({
+    asElement = 'div',
+    customLoader,
+    loading = false,
+    spinnerClass,
+    type = 'default',
+    className,
+    ...rest
+}) => {
+    const Element = asElement
+    const classes = classNames(
+        'flex items-center justify-center',
+        type === 'cover' && 'absolute inset-0 bg-white/50',
+        className
+    )
+
+    return (
+        <Element className={classes} {...rest}>
+            {loading && (
+                <div
+                    className={classNames(
+                        'animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]',
+                        spinnerClass
+                    )}
+                    style={{
+                        width: '2em',
+                        height: '2em',
+                    }}
+                />
+            )}
+            {customLoader}
+        </Element>
+    )
 }
 
 export default Loading

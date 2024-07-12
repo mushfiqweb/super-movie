@@ -3,7 +3,7 @@ import { APP_NAME } from '@/constants/app.constant';
 import useThemeClass from '@/utils/hooks/useThemeClass';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-// import ErrorBoundary from '@/components/ErrorBoundary';
+import { useNavigate } from 'react-router-dom';
 
 type MovieItemType = {
     id: number;
@@ -23,6 +23,7 @@ type MovieItemType = {
 axios.defaults.baseURL = 'http://localhost:1971'; // Replace with your actual API base URL
 
 const MovieItem = (props: MovieItemType) => {
+    const navigate = useNavigate();
     const { id, title, director, releaseYear, description, rating, duration, genres, isAvailable, posterUrl } = props;
 
     return (
@@ -58,6 +59,7 @@ const MovieItem = (props: MovieItemType) => {
                                 : 'bg-gray-300 text-gray-600 cursor-not-allowed'
                                 }`}
                             disabled={!isAvailable}
+                            onClick={() => navigate(`/movies/${id}`)}
                         >
                             {isAvailable ? 'View Details' : 'Not Available'}
                         </button>
