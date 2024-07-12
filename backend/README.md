@@ -44,16 +44,18 @@ npm run start:prod
 ```
 
 
-API Documentation
-The API documentation will be available at http://localhost:1971/api once the application is running.
+## API Documentation
+For API doc, import `Movie_API_ENV.postman_environment.json` as Postman collection.
+Import `SuperMovie.postman_collection.json` as Postman ENV.
 
-Testing
+
+## Testing
 This project includes unit tests and end-to-end tests. To run the tests, execute the following commands:
 
-# Run unit tests
+## Run unit tests
 npm run test
 
-# Run end-to-end tests
+## Run end-to-end tests
 npm run test:e2e
 
 

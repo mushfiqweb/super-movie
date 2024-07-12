@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesService Snapshot tests should match the snapshot for findAll 1`] = `
+[
+  {
+    "description": "Description 1",
+    "director": "Director 1",
+    "duration": 120,
+    "genres": [
+      "Action",
+      "Adventure",
+    ],
+    "id": 1,
+    "isAvailable": true,
+    "posterUrl": "https://example.com/poster1.jpg",
+    "rating": 4.5,
+    "releaseYear": 2022,
+    "title": "Movie 1",
+  },
+  {
+    "description": "Description 2",
+    "director": "Director 2",
+    "duration": 90,
+    "genres": [
+      "Comedy",
+      "Romance",
+    ],
+    "id": 2,
+    "isAvailable": false,
+    "posterUrl": "https://example.com/poster2.jpg",
+    "rating": 3.8,
+    "releaseYear": 2021,
+    "title": "Movie 2",
+  },
+]
+`;
+
+exports[`MoviesService Snapshot tests should match the snapshot for findOne 1`] = `
+{
+  "description": "Description 1",
+  "director": "Director 1",
+  "duration": 120,
+  "genres": [
+    "Action",
+    "Adventure",
+  ],
+  "id": 1,
+  "isAvailable": true,
+  "posterUrl": "https://example.com/poster1.jpg",
+  "rating": 4.5,
+  "releaseYear": 2022,
+  "title": "Movie 1",
+}
+`;
