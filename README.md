@@ -1,6 +1,9 @@
+##Note: it just a few hours of work.
+- the frontend is scalable to become a large scale application 
+- the backend requires a lot of work to become a large scale application 
+
+
 # Breakdown of the task
-
-
 
 General Requirements:
 ---------------------
